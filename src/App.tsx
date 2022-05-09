@@ -1,5 +1,5 @@
 import { useState } from "react";
-import TodoListItem from "./components/todoListItem";
+import TodoList from "./components/TodoList";
 
 // * https://www.youtube.com/watch?v=sOP7eOPXPjQ vid tut
 
@@ -11,7 +11,7 @@ const dummyData: Todo[] = [
 function App() {
   const [todos, setTodos] = useState(dummyData);
 
-  const toggleTodo: toggleTodo = (selectedTodo) => {
+  const toggleTodo: ToggleTodo = (selectedTodo) => {
     const newTodos = todos.map((todo) => {
       if (todo === selectedTodo) {
         return {
@@ -25,10 +25,9 @@ function App() {
   };
 
   return (
-    <ul>
-      <TodoListItem todo={todos[0]} toggleTodo={toggleTodo} />
-      <TodoListItem todo={todos[1]} toggleTodo={toggleTodo} />
-    </ul>
+    <>
+      <TodoList todos={todos} toggleTodo={toggleTodo} />
+    </>
   );
 }
 

@@ -3,4 +3,4 @@ interface Todo {
   complete: boolean;
 }
 
-type toggleTodo = (selectedTodo: Todo) => void;
+type ToggleTodo = (selectedTodo: Todo) => void;

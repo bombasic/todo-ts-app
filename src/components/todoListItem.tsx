@@ -1,6 +1,6 @@
 interface Props {
   todo: Todo;
-  toggleTodo: toggleTodo;
+  toggleTodo: ToggleTodo;
 }
 
 const TodoListItem: React.FC<Props> = ({ todo, toggleTodo }) => {
