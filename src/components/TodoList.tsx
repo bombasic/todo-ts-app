@@ -1,4 +1,3 @@
-import AddTodoForm from "./AddTodoForm";
 import TodoListItem from "./TodoListItem";
 
 interface TodoListProps {
@@ -16,7 +15,6 @@ const TodoList: React.FC<TodoListProps> = ({ todos, toggleTodo }) => {
           );
         })}
       </ul>
-      <AddTodoForm />
     </>
   );
 };

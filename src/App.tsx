@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AddTodoForm from "./components/AddTodoForm";
 import TodoList from "./components/TodoList";
 
 // * https://www.youtube.com/watch?v=sOP7eOPXPjQ vid tut
@@ -24,9 +25,14 @@ function App() {
     setTodos(newTodos);
   };
 
+  const addTodo: AddTodo = (newTodo) => {
+    setTodos([...todos, { text: newTodo, complete: false }]);
+  };
+
   return (
     <>
       <TodoList todos={todos} toggleTodo={toggleTodo} />
+      <AddTodoForm addTodo={addTodo} />
     </>
   );
 }
